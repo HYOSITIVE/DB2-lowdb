@@ -8,3 +8,20 @@ const adapter = new FileSync('db.json') // 데이터를 db.json에 저장
 const db = low(adapter) // db라는 변수로 lowdb 제어
 
 db.defaults({ topic: [], author: []}).write() // topic, author라는 배열 생성
+// db.get('author').push({
+//     id:1,
+//     name:'egoing',
+//     profile:'developer'
+// }).write();
+// db.get('topic').push({
+//     id:1,
+//     title:'lowdb',
+//     description:'lowdb is ...',
+//     author:1
+// }).write();
+db.get('topic').push({
+    id:2,
+    title:'mysql',
+    description:'mysql is ...',
+    author:1
+}).write();
