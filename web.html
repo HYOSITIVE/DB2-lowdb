@@ -7,6 +7,7 @@
         <script>
             var adapter = new LocalStorage('db') // 로컬 저장소 'db'에 lowdb 데이터를 저장
             var db = low(adapter) // db라는 변수로 lowdb를 제어
+            db.defaults({ topic: [], author: []}).write()
         </script>
     </head>
 </html>
