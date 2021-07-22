@@ -8,23 +8,27 @@
             var adapter = new LocalStorage('db') // 로컬 저장소 'db'에 lowdb 데이터를 저장
             var db = low(adapter) // db라는 변수로 lowdb를 제어
             db.defaults({ topic: [], author: []}).write()
-            db.get('author').push({
-                id:1,
-                name:'egoing',
-                profile:'developer'
-            }).write();
-            db.get('topic').push({
-                id:1,
-                title:'lowdb',
-                description:'lowdb is ...',
-                author:1
-            }).write();
-db.get('topic').push({
-    id:2,
-    title:'mysql',
-    description:'mysql is ...',
-    author:1
-}).write();
+            // db.get('author').push({
+            //     id:1,
+            //     name:'egoing',
+            //     profile:'developer'
+            // }).write();
+            // db.get('topic').push({
+            //     id:1,
+            //     title:'lowdb',
+            //     description:'lowdb is ...',
+            //     author:1
+            // }).write();
+            // db.get('topic').push({
+            //     id:2,
+            //     title:'mysql',
+            //     description:'mysql is ...',
+            //     author:1
+            // }).write();
+            console.log(
+                db.get('topic')
+                .find({title:'lowdb', author:1})
+                .value());
         </script>
     </head>
 </html>
