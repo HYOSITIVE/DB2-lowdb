@@ -1,10 +1,8 @@
-import { join } from 'path'
-import { Low, JSONFile } from 'lowdb'
+// 2021.07.22
+// by HYOSITIVE
+// based on DATABASE2 - lowdb - 2
 
-// Use JSON file for storage
-const file = join(__dirname, 'db.json')
-const adapter = new JSONFile(file)
-const db = new Low(adapter)
-
-// Read data from JSON file, this will set db.data content
-await db.read()
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync') // 데이터 저장 방식 : FileSync
+const adapter = new FileSync('db.json') // 데이터를 db.json에 저장
+const db = low(adapter) // db라는 변수로 lowdb 제어
