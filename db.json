@@ -5,6 +5,12 @@
       "title": "lowdb",
       "description": "lowdb is ...",
       "author": 1
+    },
+    {
+      "id": "ujRp8ZzBlx",
+      "title": "PostgreSQL",
+      "description": "PostgreSQL is ...",
+      "author": "F67HvARHE"
     }
   ],
   "author": [
@@ -12,6 +18,11 @@
       "id": 1,
       "name": "egoing",
       "profile": "developer"
+    },
+    {
+      "id": "F67HvARHE",
+      "name": "taeho",
+      "profile": "data scientist"
     }
   ]
 }
